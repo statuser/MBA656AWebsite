@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-US">
+<!-- InstanceBegin template="/Templates/CanvasPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- InstanceEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<style>
+body {
+	margin-bottom: 5em;
+	margin-top: 3em;
+	margin-left: 20em;
+	margin-right: 20em;
+}
+.section-header {
+}
+.section-body {
+	padding: 0px 10px 10px 10px;
+	border: solid #ccc 1px;
+	overflow: hidden;
+}
+.show-content.user_content.clearfix.enhanced .section-body .checklist {
+}
+.checklist {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+.checklist li:before {
+	content: "❑";
+	display: block;
+	float: left;
+	width: 1.2em;
+	color: #000000;
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- InstanceBeginEditable name="content" -->
+  <h2 class="section-header">Psuedo-Code Answer Key</h2>
+  <div class="section-body">
+    <ol style="steplist">
+      <li>Step 1 - Play the game ones or twice to really understand the rules.  If you aren't able to play the game 
+        find a video online about how the game is played. </li>
+      <li> Step 2 - Identify what problems we are going to solve and what features we are not going to implement. <br>
+        <ul>
+          <li>We will be creating one players experience with playing TENZI.  We will not create multiple players that race each other</li>
+          <li>We are only going to solve one round of the game.  We are not going to keep score or consider alternative versions</li>
+          <li>We are only going to play the default version of the game.  We will not be playing any of the variations</li>
+          <li>We are not going to stop if somebody else shouts 'TENZI'.  We will just continue until we complete the TENZI and handle who wins separately</li>
+        </ul>
+      </li>
+      <li>Step 3 - Write down what steps you take when you play the game <br>
+        <ol>
+          <li>Pick up ten dice</li>
+          <li>Once go is said roll the dice</li>
+          <li>Find which number has the highest count - This is the target number <br>
+            <ul>
+              <li>If there is a tie in the counts of two numbers pick the target number randomly</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+      <li>Pick up the remaining dice and roll again</li>
+      <li>Pull out the matching dice</li>
+      <li>If the saved pile has 10 dice in it shout "TENZI"</li>
+      <li>Repeat steps 4-6 until: <br>
+        <ul>
+          <li>You shout "TENZI" or</li>
+          <li>Somebody else "TENZI"</li>
+        </ul>
+      </li>
+      <li>If you shout "TENZI" you win - gloat and rub it in the pther players faces</li>
+      <li>If somebody else shouts "TENZI" you lose - pout and vow to never play games again</li>
+      <li>Step 4 - Identify what needs to be stored in memory for the previous steps <br>
+        <ol>
+          <li>A list of all ten dice and the value for each one</li>
+          <li>A value showing the target number</li>
+        </ol>
+      </li>
+      <li>Step 5 - Combine steps 3 and 4 into psuedo-code.  The closer we make it to computer language the 
+        less work we have to do latter.  It is sometimes worth it to refine our psuedo-code multiple times</li>
+    </ol>
+    <p>Try one:</p>
+    <pre>
+	 		Initialize dice - a 10 item list with initial values set to 0
+	  		Wait for "GO" (This could be an input with something like "Press any key to start")
+	  		Roll each die - We will need to fill in additional details on how to do this.  (Maybe a function?)
+	  		Find which number has the maximum occurances - This is also more complicated can we find a function to do this for us?
+	  			If there is a tie take the lowest number
+	  		Set target_number to maximum in previous step
+	  		dice_to_reroll = number of dice not equal to the target number
+	  		while dice_to_reroll &gt; 0
+	  			Reroll the die excluding those that have the value of the target number
+	  			dice_to_reroll = number of dice not equal to target number
+	  		Print("TENZI")
+	  	</pre>
+    <p> OK it looks like we need to fill in a few details and maybe do a little bit of research.  We probably 
+      need to write a separate script to roll the dice.  A single bit of code should do the trick here.</p>
+    <p>We also need to figure out which number has the highest count.  A quick Google search of "Python find the 
+      maximum occurance of an item in a list" yields this page: <a href="https://stackoverflow.com/questions/6987285/python-find-the-item-with-maximum-occurrences-in-a-list">Stackoverflow 
+      - Python- find the item with maximum occurrences in a list</a> With answer 2 we can just use default python without any libraries so that seems like and easy problem to solve.</p>
+    <p>The last issue is that we need to figure out how many numbers match our target number.  A Google search seems to be a good solution here.  I searched
+      for "python find how many times an item appears in a list" and got this result: <a href="https://stackoverflow.com/questions/2600191/how-can-i-count-the-occurrences-of-a-list-item">StackOverflow -
+      How can I count the occurrences of a list item?</a></p>
+    <p>This leads to the following code:</p>
+    <pre>
+	  	<code>
+	  		import random
+
+			def roll(dice_list, keep_number=None):
+				for index, die in enumerate(dice_list):
+					if keep_number is None or die != keep_number:
+						dice_list[index] = random.choice(range(1,7))
+				return dice_list
+
+			dice = [None]*10
+			input("Press enter to start")
+			dice = roll(dice)
+			target_number = max(dice, key=dice.count) # Automatically resolves ties
+			dice_to_reroll = 10 - dice.count(target_number)
+			while dice_to_reroll > 0:
+				dice = roll(dice, target_number)
+				print(dice)
+				dice_to_reroll = 10 - dice.count(target_number)
+			print("TENZI")
+	 	</code>
+	  </pre>
+  </div>
+  <!-- InstanceEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

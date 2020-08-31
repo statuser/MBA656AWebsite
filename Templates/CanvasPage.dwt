@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- TemplateEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<style>
+body {
+	margin-bottom: 5em;
+	margin-top: 3em;
+	margin-left: 20em;
+	margin-right: 20em;
+}
+.section-header {
+}
+.section-body {
+	padding: 0px 10px 10px 10px;
+	border: solid #ccc 1px;
+	overflow: hidden;
+}
+.show-content.user_content.clearfix.enhanced .section-body .checklist {
+}
+.checklist {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+.checklist li:before {
+	content: "❑";
+	display: block;
+	float: left;
+	width: 1.2em;
+	color: #000000;
+}
+</style>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body>
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- TemplateBeginEditable name="content" -->
+  <h2 class="section-header">Section Header</h2>
+  <div class="section-body">
+    <p>Include section content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia corporis suscipit distinctio at quaerat inventore esse commodi autem eligendi dolorem dignissimos obcaecati mollitia hic, ratione necessitatibus itaque laboriosam temporibus aspernatur.</p>
+  </div>
+  <h2 class="section-header">Unordered List Header</h2>
+  <div class="section-body">
+    <p>This is a section with an un ordered list:</p>
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+    </ul>
+  </div>
+  <h2 class="section-header">Ordered List Header</h2>
+  <div class="section-body">
+    <p>This is a section with an ordered list</p>
+    <ol>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+    </ol>
+  </div>
+  <h2 class="section-header">Check List Header</h2>
+  <div class="section-body">
+    <p>This is a section with a checklist:</p>
+    <ul class="checklist">
+      <li>Checklist Item 1</li>
+      <li>Checklist Item 2</li>
+      <li>Checklist Item 3</li>
+    </ul>
+  </div>
+  <!-- TemplateEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+</html>
