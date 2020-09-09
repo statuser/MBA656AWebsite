@@ -147,46 +147,46 @@ body {
               </tbody>
             </table>
           </li>
-			<li>Python handles type infomration auto-magically. (One of the nice things about Python.) <br>
-			This does not mean that Python doesn't have types or is untyped.  It simply means that Python enspects the variable and automatically determines the best type to store a variable as.  This works 99% of the time, but sometimes it can get confused.</li>
-			<li>Use <code>type(variable_name)</code> to find the type of a variable in your code or during debugging.</li>
-			<li>You have to explicitly convert a variable of one type to another.  This is called "casting". <br>
-			Consider the following case: 
-			The number "1" is stored as a string.  You can convert it to an integer so you can do math on it by sing <code>int("1")</code>.  <br>
-			The full list of commands for casting is:
-			<ul>
-				<li><code>int ( . )</code></li>
-				<li><code>float ( . )</code></li>
-				<li><code>bool ( . )</code></li>
-				<li><code>str ( . )</code></li>
-				</ul>
-			</li>
-			<li>Python allows you to make your own types as well has some built in higher order types.  (More about this later)</li>	
+          <li>Python handles type infomration auto-magically. (One of the nice things about Python.) <br>
+            This does not mean that Python doesn't have types or is untyped.  It simply means that Python enspects the variable and automatically determines the best type to store a variable as.  This works 99% of the time, but sometimes it can get confused.</li>
+          <li>Use <code>type(variable_name)</code> to find the type of a variable in your code or during debugging.</li>
+          <li>You have to explicitly convert a variable of one type to another.  This is called "casting". <br>
+            Consider the following case: 
+            The number "1" is stored as a string.  You can convert it to an integer so you can do math on it by sing <code>int("1")</code>. <br>
+            The full list of commands for casting is:
+            <ul>
+              <li><code>int ( . )</code></li>
+              <li><code>float ( . )</code></li>
+              <li><code>bool ( . )</code></li>
+              <li><code>str ( . )</code></li>
+            </ul>
+          </li>
+          <li>Python allows you to make your own types as well has some built in higher order types.  (More about this later)</li>
         </ul>
       </li>
-      <li>Value - 
-		<ul>
-		  <li>Can be either a bare value called a literal or an expression.  i.e. <code>sum = 1+2</code></li>
-		  <li>Expressions are going to depend on the type: 
-			<ul>
-			  <li>Integers and Floats - All basic mathematical operations - <code>+, -, *, /, %, **</code></li>
-			  <li>Strings - combine or concatenate 2 strings (+), repeat a string (*)</li>
-			  <li>Boolean - boolean arithmatic ( and, or, not - covered later in class)</li>
-			 </ul>
-		</li>
-			<li>Custom operations called functions are possible - More in a future class</li>
-		</ul>
-	</li>
+      <li>Value -
+        <ul>
+          <li>Can be either a bare value called a literal or an expression.  i.e. <code>sum = 1+2</code></li>
+          <li>Expressions are going to depend on the type:
+            <ul>
+              <li>Integers and Floats - All basic mathematical operations - <code>+, -, *, /, %, **</code></li>
+              <li>Strings - combine or concatenate 2 strings (+), repeat a string (*)</li>
+              <li>Boolean - boolean arithmatic ( and, or, not - covered later in class)</li>
+            </ul>
+          </li>
+          <li>Custom operations called functions are possible - More in a future class</li>
+        </ul>
+      </li>
     </ul>
-	 <p>Example: Ask for a dog's name and age.  Calculate the human equivalent age and then return a greeting with the name of the dog and the age.</p>
-	  <pre><code>dog_to_human_conversion = 7
+    <p>Example: Ask for a dog's name and age.  Calculate the human equivalent age and then return a greeting with the name of the dog and the age.</p>
+    <pre><code>dog_to_human_conversion = 7
 	  dog_name = input("What is your dog's name?")
 	  dog_age = input("How old is your dog?")
 	  human_age = dog_age * dog_to_human_converstion . # There is an error on this line.  Can you spot it?
 	  print("Your dog " + dog_name + " would be " + human_age + " years old if they were a human.")
 	  </code></pre>
   </div>
-	<h2 class="section-header">Homework Assignment</h2>
+  <h2 class="section-header">Homework Assignment</h2>
   <div class="section-body">
     <p>Complete the variables assignment</p>
   </div>
