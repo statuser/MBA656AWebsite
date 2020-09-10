@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-US"><!-- InstanceBegin template="/Templates/CanvasPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- InstanceEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<style>
+body {
+	margin-bottom: 5em;
+	margin-top: 3em;
+	margin-left: 20em;
+	margin-right: 20em;
+}
+.section-header {
+}
+.section-body {
+	padding: 0px 10px 10px 10px;
+	border: solid #ccc 1px;
+	overflow: hidden;
+}
+.show-content.user_content.clearfix.enhanced .section-body .checklist {
+}
+.checklist {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+.checklist li:before {
+	content: "❑";
+	display: block;
+	float: left;
+	width: 1.2em;
+	color: #000000;
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- InstanceBeginEditable name="content" -->
+  <h2 class="section-header">Objectives</h2>
+  <div class="section-body">
+	<h4>This assignment will cover two lectures worth of material.  Make sure you watch/read both "Boolean and Branching" and "Loops and Compound Boolean Statements" before starting</h4>
+    <ul>
+	  	<li>Practice using boolean expressions</li>
+		<li>Practice writing while loops</li>
+		<li>Practice turning psuedo-code into actual code</li>
+		<li>Write and run a real working python program</li>
+	  </ul>
+  </div>
+	  <h2 class="section-header">Deliverable</h2>
+  <div class="section-body">
+    <p>Submit a python program.  This is a text file with a .py extension.  Create this file in Visual Studio Code. To do this: 
+		<ol>
+			<li>Open Visual Studio Code</li>
+			<li>Select <code>File &gt; New File</code></li>
+			<li>Select <code>File &gt; Save</code></li>
+			<li>Name the file making sure to end the anme with .py</li>
+			<li>Start writing cod ein the file</li>
+	  </ol>
+	  You will need to submit this single .py file as your homework.</p>
+  </div>
+
+  <h2 class="section-header">Rock, Paper, Scissors</h2>
+  <div class="section-body">
+    <p>Rock, paper, scissors is a classic game that has been used to decide everything form multi-million dollar investments to who gets the front seat.  You assignment is to create a computer opponent to play rock, paper, scissors against.  This program will need to:</p>
+    <ul>
+      <li>Randomly select either rock, paper, or scissors</li>
+      <li>Wait for the player to input their selection</li>
+		<li>Verify that the users selection is valid</li>
+		<li>Determine if there is a tie and if there is restart the game</li>
+		<li>Announce what each participant threw and who the winner is.</li>
+    </ul>
+	<p>Remember that for this introductory class you can assume users will not intentionally try to break the rules and as such do not need to make extensive input checks.</p>
+	  <p>Sample output for the program looks like:
+	  <pre>
+	  <code>
+	  Hello, let's play Rock, Paper, Scissors!
+	  I have picked my hand.
+	  Please type in "rock", "paper", or "scissors" to select your hand?
+	  **User types in**rock
+	  I selected paper, I win!
+	  </code>
+	  </pre>
+	  </p>
+	<p>There are likely many solutions available online and even in the book I recommended.  Please try to complete the assignment without looking up the solution online.  This might take you a couple of hours to figure out which is why I'm spreading the assignment over two class periods.</p>
+	<p>I would recommend that you start by writing psuedo-code to solve the problem and then revising your psuedo-code to convert it into actual Python code.  This will separate the logic of the game from the programming syntax and should make the assignment much easier.</p>
+	<p>There is one thing that you will need to use that we haven't talked about yet.  This is the randint() function from the module random.  This will generate a random integer that you can convert into the choice for the computer.  To get you started here is the code that we haven't yet talked about that you will need:
+	<pre>
+	<code>
+	import random 
+	# Random is a module that contains code written by the python developers to help 
+	# generating random numbers.  We will talk more about modules later, but there
+	# are many modules that have been written that can simplify many tasks.  Much
+	# of your programming will just be using code that others have written by
+	# importing modules and calling functions.
+	
+	computer_choice = random.randint(0,2)
+	# This line calls the function randint from the module random and stores the 
+	# result as computer choice.  The function randint(start_number, end_number) 
+	# generates a random integer between start_number and end_number including 
+	# the end points. Programmers like to start counting at 0 instead of 1 so 
+	# computer_choice will 0, 1, or 2 chosen at random.
+	...Fill in your code here ...
+	</code>
+	</pre>
+	</p>
+  </div>
+  <h2 class="section-header">Assignment is due: Monday, September 21st at 11:59pm</h2>
+
+  <!-- InstanceEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+<!-- InstanceEnd --></html>
