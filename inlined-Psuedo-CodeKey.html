@@ -26,7 +26,7 @@
     <ol style="steplist">
       <li>Step 1 - Play the game ones or twice to really understand the rules.  If you aren't able to play the game 
         find a video online about how the game is played. </li>
-      <li> Step 2 - Identify what problems we are going to solve and what features we are not going to implement. <br>
+      <li> Step 2 - Identify what problems we are going to solve and what features we are not going to implement.
         <ul>
           <li>We will be creating one players experience with playing TENZI.  We will not create multiple players that race each other</li>
           <li>We are only going to solve one round of the game.  We are not going to keep score or consider alternative versions</li>
@@ -34,29 +34,29 @@
           <li>We are not going to stop if somebody else shouts 'TENZI'.  We will just continue until we complete the TENZI and handle who wins separately</li>
         </ul>
       </li>
-      <li>Step 3 - Write down what steps you take when you play the game <br>
+      <li> Step 3 - Write down what steps you take when you play the game
         <ol>
           <li>Pick up ten dice</li>
           <li>Once go is said roll the dice</li>
-          <li>Find which number has the highest count - This is the target number <br>
+          <li>Find which number has the highest count - This is the target number
             <ul>
               <li>If there is a tie in the counts of two numbers pick the target number randomly</li>
             </ul>
           </li>
+          <li>Pick up the remaining dice and roll again</li>
+          <li>Pull out the matching dice</li>
+          <li>If the saved pile has 10 dice in it shout "TENZI"</li>
+          <li>Repeat steps 4-6 until:
+            <ul>
+              <li>You shout "TENZI" or</li>
+              <li>Somebody else "TENZI"</li>
+            </ul>
+          </li>
+          <li>If you shout "TENZI" you win - gloat and rub it in the other players faces</li>
+          <li>If somebody else shouts "TENZI" you lose - pout and vow to never play games again</li>
         </ol>
       </li>
-      <li>Pick up the remaining dice and roll again</li>
-      <li>Pull out the matching dice</li>
-      <li>If the saved pile has 10 dice in it shout "TENZI"</li>
-      <li>Repeat steps 4-6 until: <br>
-        <ul>
-          <li>You shout "TENZI" or</li>
-          <li>Somebody else "TENZI"</li>
-        </ul>
-      </li>
-      <li>If you shout "TENZI" you win - gloat and rub it in the pther players faces</li>
-      <li>If somebody else shouts "TENZI" you lose - pout and vow to never play games again</li>
-      <li>Step 4 - Identify what needs to be stored in memory for the previous steps <br>
+<li>Step 4 - Identify what needs to be stored in memory for the previous steps
         <ol>
           <li>A list of all ten dice and the value for each one</li>
           <li>A value showing the target number</li>
@@ -67,18 +67,24 @@
     </ol>
     <p>Try one:</p>
     <pre>
-	 		Initialize dice - a 10 item list with initial values set to 0
-	  		Wait for "GO" (This could be an input with something like "Press any key to start")
-	  		Roll each die - We will need to fill in additional details on how to do this.  (Maybe a function?)
-	  		Find which number has the maximum occurances - This is also more complicated can we find a function to do this for us?
-	  			If there is a tie take the lowest number
-	  		Set target_number to maximum in previous step
-	  		dice_to_reroll = number of dice not equal to the target number
-	  		while dice_to_reroll &gt; 0
-	  			Reroll the die excluding those that have the value of the target number
-	  			dice_to_reroll = number of dice not equal to target number
-	  		Print("TENZI")
-	  	</pre>
+	<code>
+	Initialize dice - a 10 item list with initial values set to 0
+	Wait for "GO" (This could be an input with 
+		something like "Press any key to start")
+	Roll each die - We will need to fill in additional details 
+		on how to do this.  (Maybe a function?)
+	Find which number has the maximum occurances - This is also 
+			more complicated can we find a function to do this for us?
+		If there is a tie take the lowest number
+	Set target_number to maximum in previous step
+	dice_to_reroll = number of dice not equal to the target number
+	while dice_to_reroll &gt; 0
+		Reroll the die excluding those that have 
+			the value of the target number
+		dice_to_reroll = number of dice not equal to target number
+	Print("TENZI")
+	</code>
+	</pre>
     <p> OK it looks like we need to fill in a few details and maybe do a little bit of research.  We probably 
       need to write a separate script to roll the dice.  A single bit of code should do the trick here.</p>
     <p>We also need to figure out which number has the highest count.  A quick Google search of "Python find the 
@@ -89,26 +95,27 @@
       How can I count the occurrences of a list item?</a></p>
     <p>This leads to the following code:</p>
     <pre>
-	  	<code>
-	  		import random
+	<code>
+	import random
 
-			def roll(dice_list, keep_number=None):
-				for index, die in enumerate(dice_list):
-					if keep_number is None or die != keep_number:
-						dice_list[index] = random.choice(range(1,7))
-				return dice_list
+	def roll(dice_list, keep_number=None):
+		for index, die in enumerate(dice_list):
+			if keep_number is None or die != keep_number:
+				dice_list[index] = random.choice(range(1,7))
+		return dice_list
 
-			dice = [None]*10
-			input("Press enter to start")
-			dice = roll(dice)
-			target_number = max(dice, key=dice.count) # Automatically resolves ties
-			dice_to_reroll = 10 - dice.count(target_number)
-			while dice_to_reroll &gt; 0:
-				dice = roll(dice, target_number)
-				print(dice)
-				dice_to_reroll = 10 - dice.count(target_number)
-			print("TENZI")
-	 	</code>
+	dice = [None]*10
+	input("Press enter to start")
+	dice = roll(dice)
+	print(dice)
+	target_number = max(dice, key=dice.count) # Automatically resolves ties
+	dice_to_reroll = 10 - dice.count(target_number)
+	while dice_to_reroll &gt; 0:
+		dice = roll(dice, target_number)
+		dice_to_reroll = 10 - dice.count(target_number)
+	print(dice)
+	print("TENZI")
+	</code>
 	  </pre>
   </div>
   <!-- InstanceEndEditable --> 

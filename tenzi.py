@@ -9,10 +9,11 @@ def roll(dice_list, keep_number=None):
 dice = [None]*10
 input("Press enter to start")
 dice = roll(dice)
+print(dice)
 target_number = max(dice, key=dice.count) # Automatically resolves ties
 dice_to_reroll = 10 - dice.count(target_number)
 while dice_to_reroll > 0:
     dice = roll(dice, target_number)
-    print(dice)
     dice_to_reroll = 10 - dice.count(target_number)
 print("TENZI")
+print(dice)

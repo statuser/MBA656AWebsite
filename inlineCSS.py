@@ -7,6 +7,6 @@ message_inline_css = inline_css(htmlFile.read())
 htmlFile.close()
 
 outputHtml = "inlined-" + sys.argv[-1]
-outputFile = open(outputHtml, "a")
+outputFile = open(outputHtml, "w")
 outputFile.write(message_inline_css)
 outputFile.close()
