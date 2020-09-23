@@ -39,3 +39,54 @@ bark('Kitty', 45)
 bark('Sparky', 15)
 bark('Jackson', 12)
 bark('Ranger', 65)
+
+greeting = 'Greetings'
+
+def greet(name, message):
+    print(greeting, name + '.', message)
+
+greet('June', 'See you soon!')
+
+
+greeting = 'Greetings'
+
+def greet(name, message):
+    greeting = 'Hi'
+    print(greeting, name + '.', message)
+
+greet('June', 'See you soon!')
+print(greeting)
+
+greeting = 'Greetings'
+
+def greet(name, message):
+    global greeting
+    greeting = 'Hi'
+    print(greeting, name + '.', message)
+
+greet('June', 'See you soon!')
+print(greeting)
+
+def get_bark(weight):
+    if weight > 20:
+        return 'WOOF WOOF'
+    else:
+        return 'woof woof'
+
+def get_bark(weight):
+    if weight > 20:
+        return 'WOOF WOOF'
+    return 'woof woof'
+
+def greet(name, message='You rule!'):
+    print('Hi', name + '.', message)
+
+greet('John') # Hi John. You rule!
+greet('Jennifer', 'How are you today?') # Hi Jennifer, How are you today?
+
+
+#def greet(message='You rule!', name):
+#    print('Hi', name + '.', message)
+
+greet('John', 'Howdy partner!')
+greet(message='Howdy partner!', name = 'John')
