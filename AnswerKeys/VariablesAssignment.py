@@ -3,7 +3,7 @@ print("Hi, " + name)
 
 dog_age = int(input("What is your dog's age?"))
 human_equiv_age = dog_age * 7
-print("Your dog is " + str(human_equiv_age) + " in human equivalent years.")
+print("Your dog is", human_equiv_age, "in human equivalent years.")
 
 length = float(input("What is the length of your rectangle?"))
 width = float(input("What is the width of your rectangle?"))
