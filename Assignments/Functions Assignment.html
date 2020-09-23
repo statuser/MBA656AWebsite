@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-US">
+<!-- InstanceBegin template="/Templates/CanvasPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- InstanceEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<style>
+body {
+    margin-bottom: 5em;
+    margin-top: 3em;
+    margin-left: 20em;
+    margin-right: 20em;
+}
+.section-header {
+}
+.section-body {
+    padding: 0px 10px 10px 10px;
+    border: solid #ccc 1px;
+    overflow: hidden;
+}
+.show-content.user_content.clearfix.enhanced .section-body .checklist {
+}
+.checklist {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+}
+.checklist li:before {
+    content: "❑";
+    display: block;
+    float: left;
+    width: 1.2em;
+    color: #000000;
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- InstanceBeginEditable name="content" -->
+  <h2 class="section-header">Objectives</h2>
+  <div class="section-body">
+    <p>In this homework assignment is to reinforce the lecture on functions and abstractions.  It will allow you to practice implementing the principles that we discussed.  In this homework assignment we will:</p>
+    <ul>
+      <li>Create functions to preform common tasks</li>
+      <li>Call those functions using the appropriate format</li>
+      <li>Consider different ways that we can abstract and reuse functions</li>
+      <li>Write some utility functions that will be useful for future data science projects</li>
+    </ul>
+  </div>
+  <h2 class="section-header">Assignments</h2>
+  <div class="section-body">
+    <p>In this assignment you will create a series of functions that preform common data science tasks.  You should be able to complete the assignment without relying on any outside libraries or imports.  As we have done before you will be submitting your python code as a .py file that can be run and executed. With an arbitrary set of data.</p>
+    <p>For todays exercise you will need to create functions which:
+    <ol>
+      <li>Calculate the mean of a list of numbers.  The numbers can be either integers or floating point numbers and can be of arbitrary length.  You should test your code with different number types and with different lengths.  The function should be able to handle lists if length greater than 1.  You may want to check for lists of length zero and display an error message. The function should not use any libraries or imports.  The function definition for this function should be:
+        <pre>
+		  <code>
+		  def mean(values):
+		  	...
+		  	return mean		  
+		  </code>
+		  </pre>
+      </li>
+      <li>Calculate the (sample) standard deviation of a list of numbers.  This function should call the mean function that you previously defined.  It should handle either floating point or integer numbers and should not use any additional libraries or imports. The function definition for this function should be:
+        <pre>
+		  <code>
+		  def standard_deviation(values):
+		  	...
+			return standard_deviation
+		  </code>
+		  </pre>
+      </li>
+      <li>Standardize a list of numbers.  When you are standardizing a number you are making the list have a mean of 0 and a standard deviation of 1.  This is useful when the different scale of the variables can lead to biased results.  For example if you are the revenue of large multinational companies to their number of employees.  The revenue will be on a significantly larger scale and could weight more heavily in a calculation.  Standardizing the inputs would rescale both variables to be on a similar scale. in order to standardize a variable you subtract the mean and divide by the standard deviation for each item in the list.  The previous two steps return a single number, but this function should return a list. The function definition for this function should be:
+        <pre>
+		  <code>
+		  def standardize(values):
+		  	...
+			return standardized_values
+		  </code>
+		  </pre>
+      </li>
+      <li>Challenging Exercise: Compute a moving average of a list of values.  The function should accept two parameters: the list of values and the window size for the moving average. For example, if you wanted to compute a 7-day moving average you would call the function as <code>moving_average(covid_cases, 7)</code>.  The same requirements apply to this function as the other functions.  The function definition should be:
+        <pre>
+		  <code>
+		  def moving_average(values, window):
+		  	...
+			return moving_average_values
+		  </code>
+		  </pre>
+      </li>
+      <li>Include code to test each of these functions.  You should test with multiple lists with different features to make sure that you haven't introduced an error related to a specific size of list.  The biggest issue will be lists of different lengths and different number types.</li>
+    </ol>
+    </p>
+  </div>
+  <h2 class="section-header">Deliverables</h2>
+  <div class="section-body">
+    <p>Please submit the python code as a .py file that includes the functions and the test code.  To grade the assignment, I will run your code with various arbitrary lists of numbers.  Make sure that you code is well documented and properly runs.  Over the course of the assignment you will need to run your code multiple times.  An assignment that does not run without modifications is not considered complete.</p>
+  </div>
+  <h2 class="section-header">Tips and tricks</h2>
+  <div class="section-body">
+    <p>You will need to know how to compute the mean and the standard deviation to complete this assignment.  
+      The formula for the mean is:
+      <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+        <mml:mover accent="true">
+          <mml:mrow>
+            <mml:mi>x</mml:mi>
+          </mml:mrow>
+          <mml:mo>-</mml:mo>
+        </mml:mover>
+        <mml:mo>=</mml:mo>
+        <mml:mrow>
+          <mml:msubsup>
+            <mml:mo stretchy="false">∑</mml:mo>
+            <mml:mrow>
+              <mml:mi>i</mml:mi>
+              <mml:mo>=</mml:mo>
+              <mml:mn>1</mml:mn>
+            </mml:mrow>
+            <mml:mrow>
+              <mml:mi>N</mml:mi>
+            </mml:mrow>
+          </mml:msubsup>
+          <mml:mrow>
+            <mml:mfrac>
+              <mml:mrow>
+                <mml:msub>
+                  <mml:mrow>
+                    <mml:mi>x</mml:mi>
+                  </mml:mrow>
+                  <mml:mrow>
+                    <mml:mi>i</mml:mi>
+                  </mml:mrow>
+                </mml:msub>
+              </mml:mrow>
+              <mml:mrow>
+                <mml:mi>N</mml:mi>
+              </mml:mrow>
+            </mml:mfrac>
+          </mml:mrow>
+        </mml:mrow>
+      </mml:math>
+      In words this means that the mean of a set of values (x with a bar over it) is the sum from 1 to the number of items in the list of each item divided by the number of items in the list.</p>
+    <p>The formula for the standard deviation is:
+      <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+        <mml:msub>
+          <mml:mrow>
+            <mml:mi>s</mml:mi>
+          </mml:mrow>
+          <mml:mrow>
+            <mml:mi>x</mml:mi>
+          </mml:mrow>
+        </mml:msub>
+        <mml:mo>=</mml:mo>
+        <mml:mrow>
+          <mml:msubsup>
+            <mml:mo stretchy="false">∑</mml:mo>
+            <mml:mrow>
+              <mml:mi>i</mml:mi>
+              <mml:mo>=</mml:mo>
+              <mml:mn>1</mml:mn>
+            </mml:mrow>
+            <mml:mrow>
+              <mml:mi>N</mml:mi>
+            </mml:mrow>
+          </mml:msubsup>
+          <mml:mrow>
+            <mml:mfrac>
+              <mml:mrow>
+                <mml:mfenced separators="|">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>x</mml:mi>
+                      </mml:mrow>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+                    </mml:msub>
+                    <mml:mo>-</mml:mo>
+                    <mml:mover accent="true">
+                      <mml:mrow>
+                        <mml:mi>x</mml:mi>
+                      </mml:mrow>
+                      <mml:mo>-</mml:mo>
+                    </mml:mover>
+                  </mml:mrow>
+                </mml:mfenced>
+              </mml:mrow>
+              <mml:mrow>
+                <mml:mfenced separators="|">
+                  <mml:mrow>
+                    <mml:mi>N</mml:mi>
+                    <mml:mo>-</mml:mo>
+                    <mml:mn>1</mml:mn>
+                  </mml:mrow>
+                </mml:mfenced>
+              </mml:mrow>
+            </mml:mfrac>
+          </mml:mrow>
+        </mml:mrow>
+      </mml:math>
+      In words this means that to calculate the standard deviation of a list of values x, you need to subtract each value from the mean, sum them, and then divide by the number of items minus one. </p>
+    <p>Standardizing the values have the formula:
+      <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+        <mml:mi>S</mml:mi>
+        <mml:mi>t</mml:mi>
+        <mml:mi>a</mml:mi>
+        <mml:mi>n</mml:mi>
+        <mml:mi>d</mml:mi>
+        <mml:mi>a</mml:mi>
+        <mml:mi>r</mml:mi>
+        <mml:mi>d</mml:mi>
+        <mml:mi>i</mml:mi>
+        <mml:mi>z</mml:mi>
+        <mml:mi>e</mml:mi>
+        <mml:mi>d</mml:mi>
+        <mml:mi> </mml:mi>
+        <mml:mi>V</mml:mi>
+        <mml:mi>a</mml:mi>
+        <mml:mi>l</mml:mi>
+        <mml:mi>u</mml:mi>
+        <mml:mi>e</mml:mi>
+        <mml:mo>=</mml:mo>
+        <mml:mfrac>
+          <mml:mrow>
+            <mml:mfenced separators="|">
+              <mml:mrow>
+                <mml:msub>
+                  <mml:mrow>
+                    <mml:mi>x</mml:mi>
+                  </mml:mrow>
+                  <mml:mrow>
+                    <mml:mi>i</mml:mi>
+                  </mml:mrow>
+                </mml:msub>
+                <mml:mo>-</mml:mo>
+                <mml:mover accent="true">
+                  <mml:mrow>
+                    <mml:mi>x</mml:mi>
+                  </mml:mrow>
+                  <mml:mo>-</mml:mo>
+                </mml:mover>
+              </mml:mrow>
+            </mml:mfenced>
+          </mml:mrow>
+          <mml:mrow>
+            <mml:msub>
+              <mml:mrow>
+                <mml:mi>s</mml:mi>
+              </mml:mrow>
+              <mml:mrow>
+                <mml:mi>x</mml:mi>
+              </mml:mrow>
+            </mml:msub>
+          </mml:mrow>
+        </mml:mfrac>
+      </mml:math>
+    </p>
+    <p>A moving average is just the mean of that item and the previous items in the window.  If your window is 7, then the first 6 values will not be present in the resulting moving average since there is not 7 items to average them with.</p>
+  </div>
+  <!-- InstanceEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>
