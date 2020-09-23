@@ -1,0 +1,195 @@
+<html lang="en-US">
+<!-- InstanceBegin template="/Templates/CanvasPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- InstanceEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body style="margin-bottom: 5em;margin-top: 3em;margin-left: 20em;margin-right: 20em">
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- InstanceBeginEditable name="content" -->
+  <h2 class="section-header" style="">Announcements</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>After writing the script for these asynchronous lectures I decided not to record them and just publish the lectures in written format.  I feel like this is probably more useful for a reference and there wouldn't be much gained using an audio format.</p>
+    <p>I also have combined the assignment for the next two lectures into a single assignment.  It is really hard to write a useful program without both branching and looping.</p>
+  </div>
+  <h2 class="section-header" style="">Boolean Variables</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>Boolean variables are one of the fundamental types in programming.  Boolean variables represent a True or False.  These variables form the foundation of how computers work.  Remember that all information in a computer is stored as a on/off.  In addition the basic building blocks of computers - circuits - are all about making decisions based on these on off values.  The other thing to keep in mind is that computers can only make binary decisions.  Even if a computer is choosing between three things, it evaluates each choice as a set of pairs.  Often this is handled as a cascade.  Check the first condition, then check a second condition and so forth.</p>
+    <p>Boolean Variables are primarily used to make comparisons.  The comparison operators are:
+    </p>
+<ul>
+      <li>&lt; - Less than</li>
+      <li>&lt;= - Less than or equal to</li>
+      <li>&gt; - Greater than</li>
+      <li>&gt;= - Greater than or equal to</li>
+      <li>== - Equal to</li>
+      <li>!= - Not Equal to</li>
+    </ul>
+    It is important to note that these operators have a slightly different meaning in programming than they do in math.  In math they represent a statement while in programming they represent a question.
+    
+    <p>Comparisons are usually used for numbers, but they also can be applied to Strings and Boolean values.</p>
+    <p>Try it: (Open a python console in Visual Studio Code and type in the following code. You can do this by pressing ⌘ + ⇧ + p (on Mac), CTRL+SHIFT+P (on Windows) and search for "Start REPL".)
+    </p>
+<pre>
+	<code>
+	3 &lt; 5
+	"A" &gt; "b"
+	"1" &lt; "a"
+	"20" &lt;= "100"
+	20 &lt;= 100
+	"20" == 20
+	"20" &lt;= 20
+	True &lt; False
+	1 != 2
+	</code>
+	</pre>
+    As you can see, you can compare strings and boolean values.  With strings it compares them based on alphabetical order, numbers are compared numerically.  Is there anything that surprised you in these comparisons?
+    
+  </div>
+  <h2 class="section-header" style="">Branching</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>So far the programs that we have written aren't very interesting.  They simply go through a series of steps without making any decisions or following different code paths.  think about an automated trading program:</p>
+    <pre>
+	  <code>
+	  if a stock has dropped by more than 2% then buy that stock
+	  </code>
+	  </pre>
+    <p>Nothing we have learned so far would allow us to program this rule, but these rules regularly come up in daily life.  To make smarter programs we need to be able to have our computer make decisions based on new input or random events.  In computer speak we class this "branching".</p>
+    <p>To branch in Python we use an "if" statement:</p>
+    <pre>
+	  <code>
+	  if current_temperature &lt; 65:
+	      print("Better bring a jacket or coat.")
+	  </code>
+	  </pre>
+    <p>Note the colon and the indentation on the next line.  In an "if" statement there are four important pieces.
+    </p>
+<ol>
+      <li>if - let's python know we are evaluating a branch</li>
+      <li>boolean expression (current_temperature &lt; 65) - the is the condition that we want to evaluate.  Notice that in Python unlike some other languages parenthesis are not required.  It is not an error to include them however.  The boolean statement must evaluate to True or False to be useful.  (Python treats any non zero value as true which is a common source of errors)</li>
+      <li>: - This ends the boolean expression and lets python know that whatever comes next should be conditionally evaluated.</li>
+      <li>indented code block - This is the set of code that will be conditionally executed.  The indentation is important since it defines a code block.</li>
+    </ol>
+    
+    <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+      <p>Side Note: Python uses indentation to denote a block of code.  This block of code serves as a specific unit in a program.  Whenever you change the indentation level, you are specifying that you are entering or exiting a block of code.
+      </p>
+<pre>
+	  <code>
+	  This is the parent block of code
+	  This is still in the parent block
+	  	  This is called a child block
+		  still the child
+	  We are back in the parent block
+	  </code>
+	  </pre>
+      The Python documentation recommends 4-spaces as the preferred indentation level, but it will accept any number of spaces or tabs as long as it is consistent.  When you press tab in Visual Studio Code you will get the 4 space indent by default.
+      
+      <p>One other thing to remember is that Python will only let start a new block when you have a colon and that colon has to be part of a valid python command like an if statement.</p>
+    </div>
+    <p>You can also have a block that only runs if an if statement evaluates to False.  This is naturally called an "else"
+    </p>
+<pre>
+	<code>
+	if current_temp &lt; 65:
+		print("Better bring a coat or a jacket")
+	else:
+		print("It looks like a nice day")
+	</code>
+	</pre>
+    
+    <p>You can even evaluate multiple conditions sequentially:
+    </p>
+<pre>
+	<code>
+	if current_temp &lt; 65:
+		print("Better bring a coat or a jacket.")
+	elif current_temp &gt; 80:
+		print("Looks like shorts weather")
+	else:
+		print("You must be in Southern California")
+	</code>
+	</pre>
+    elif is just a contraction of "else if."
+    
+    <p>Branches are mostly used to process input and in response to a random occurence.This input can come from the user, a sensor, or an internet request.</p>
+    <h2 class="section-header" style="">Compound Boolean Expressions</h2>
+    <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+      <p>Many times you will want to test against multiple conditions or your code will read better if you can reorganize the boolean logic.  Compound expressions allow you to do this.  There are three operators for compound boolean expressions.  This only apply to boolean values and are executed after all the other logic is resolved.  The expressions are:
+      </p>
+<ul>
+        <li>and</li>
+        <li>or</li>
+        <li>not</li>
+      </ul>
+      (These are present in all programming languages, but other languages like R use &amp;&amp;, ||, ! for and, or, and not respectively.
+      
+      <p><code>and</code> - Compares two boolean values and if both are "True" then the result is true.
+      </p>
+<pre>
+	<code>
+	if age &gt; 18 and us_citizen == True:
+		print("You should vote")
+	</code>
+	</pre>
+      Notice that both expressions must be True in order for the conditional block to be executed.
+      
+      <p><code>or</code> - Compares two boolean values if either one or both are true then the whole statement is true.
+      </p>
+<pre>
+	<code>
+	if order &gt; 29 or loyalty_member:
+		print("Congratulations you get free shipping")
+	</code>
+	</pre>
+      Notice that loyalty_member does not have a boolean expression, but is just a variable.  This means that loyalty member is probably of type boolean so we don't need an expression to convert it to a boolean value.
+      
+      <p><code>not</code> - Changes a True value to False and vise-versus.
+      </p>
+<pre>
+	<code>
+	valid = false
+	while not valid:
+		email = input("Please enter your email address")
+		valid = is_valid_email_address(email)
+	</code>
+	</pre>
+      We will be talking about the while statement in the next section, but you should be able to guess what it does.
+      
+      <p>Compound expressions can be difficult to evaluate when there are a lot of them strung together.  Consider this example:
+      </p>
+<pre>
+	  <code>
+	  not True or True and False
+	  </code>
+	  </pre>
+      Is the result of this expression True or False.  Use parenthesis to make things clear.
+      <pre>
+	  <code>
+	  not (True) or (True and False)
+	  </code>
+	  </pre>
+      In the second example the logic is much clearer.
+      
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>

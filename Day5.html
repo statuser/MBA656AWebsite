@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US"><!-- InstanceBegin template="/Templates/CanvasPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- InstanceEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<style>
+body {
+	margin-bottom: 5em;
+	margin-top: 3em;
+	margin-left: 20em;
+	margin-right: 20em;
+}
+.section-header {
+}
+.section-body {
+	padding: 0px 10px 10px 10px;
+	border: solid #ccc 1px;
+	overflow: hidden;
+}
+.show-content.user_content.clearfix.enhanced .section-body .checklist {
+}
+.checklist {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+.checklist li:before {
+	content: "❑";
+	display: block;
+	float: left;
+	width: 1.2em;
+	color: #000000;
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- InstanceBeginEditable name="content" -->
+    <h2 class="section-header">Loops</h2>
+  <div class="section-body">
+    <p>Closely related to if statements are loops.  Many times in programming we want to repeat a statement or block of code until a certain event occurs.  This is called looping.</p>
+	  <p>One way to think about this is: "Please repeat these steps until ... happens".</p>
+	  <p>Like many things, programmers have decided to think about this a little backward.  The common way to express this is as a statement "while this is true execute the following block of code."  The syntax for these statements is:
+	  <pre>
+	  <code>
+	  while expression == True:
+	      compute_something;
+	  </code>
+	  </pre>
+	  </p>
+	  <p>We saw this in the TENZI example:
+	<pre>
+	<code>
+	while dice_to_reroll > 0:
+        dice = roll(dice, target_number)
+        dice_to_reroll = 10 - dice.count(target_number)
+	</code>
+	</pre></p>
+	  <p>Inside the while loop, we will often have an "if" statement that changes the expression from False to True. We saw this in the last lesson:
+	<pre>
+	<code>
+	valid = false
+	while not valid:
+		email = input("Please enter your email address")
+		valid = is_valid_email_address(email)
+	</code>
+	</pre>
+	</p>
+	  <h3 class="section-header">Side-note: Scope</h3>
+  <div class="section-body">
+    <p>Scope refers to the part of a program that can read or write to a variable.  Scope is defined at the block level.</p>
+	  <p>A variable is said to be visible if it can be read or written.  A variable is visible to the code block it is defined in and any child code blocks.  Remember that in python a child code block is any code that is indented to a higher level than the containing code.</p>
+  </div>
+	<p>The control variable or expression should be initialized before the while loop so the variable is in the parent scope.  That variable will then be updated in side the while loop which is a child block of the main program.  Remember variables are only visible if they are declared in the same block or a parent block.  The while loop is evaluated at the parent block level so any variables in the expression need to be defined at the parent level.</p>
+	<p>Try it (type this code into the an interactive Python session.  (Remember the Visual Studio command is "Run REPL"):
+	<pre>
+	<code>
+number_of_loops = 0
+while number_of_loops < 5:
+	number_of_loops = number_of_loops + 1
+	print("Completing loop " + str(number_of_loops))
+print("We finished.")
+	</code></pre>
+	</p>
+	<p>Beware the infinite loop! This is a programming error that is so common it has its own name.  It occurs when a loop condition is never satisfied.  To stop a program that is caught in an infinite loop you have to force quit.  (Use CTRL+C to force quite a python command like program.)</p>
+  </div>
+
+  <!-- InstanceEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+<!-- InstanceEnd --></html>

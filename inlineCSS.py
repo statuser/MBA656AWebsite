@@ -1,12 +1,13 @@
 from inlinestyler.utils import inline_css
-import os, sys
+import os
+import sys
 
-
-htmlFile = open(sys.argv[-1], "r")
+file = sys.argv[-1]
+htmlFile = open(file, "r")
 message_inline_css = inline_css(htmlFile.read())
 htmlFile.close()
 
-outputHtml = "inlined-" + sys.argv[-1]
+outputHtml = "inlined/inlined-" + os.path.basename(file)
 outputFile = open(outputHtml, "w")
 outputFile.write(message_inline_css)
 outputFile.close()

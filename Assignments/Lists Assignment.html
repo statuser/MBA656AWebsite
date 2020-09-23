@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-US"><!-- InstanceBegin template="/Templates/CanvasPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- InstanceEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<style>
+body {
+	margin-bottom: 5em;
+	margin-top: 3em;
+	margin-left: 20em;
+	margin-right: 20em;
+}
+.section-header {
+}
+.section-body {
+	padding: 0px 10px 10px 10px;
+	border: solid #ccc 1px;
+	overflow: hidden;
+}
+.show-content.user_content.clearfix.enhanced .section-body .checklist {
+}
+.checklist {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+.checklist li:before {
+	content: "❑";
+	display: block;
+	float: left;
+	width: 1.2em;
+	color: #000000;
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- InstanceBeginEditable name="content" -->
+<h2 class="section-header">Objectives</h2>
+  <div class="section-body">
+    <p>In this homework assignment is to reinforce the lecture on lists and iterations.  In this homework assignment we will:</p>
+    <ul>
+      <li>Create an empty list to hold results of a calculation</li>
+      <li>Use for loops to perform repeated operations</li>
+		<li>Append items to a list to create a list of undetermined length</li>
+	  <li>Learn about nested for loops.  (Loops with in a loop.)</li>
+		<li>Start writing useful data-science code</li>
+		<li>Begin working with the python plotting library, matplotlib</li>
+    </ul>
+  </div>  
+	  <h2 class="section-header">Assignments</h2>
+  <div class="section-body">
+    <p>You have know learned enough to start writing useful data science and analytics programs.  In fact with what you have learned so far, some computer scientists would say that you have enough knowledge to write any computer program.  You have learned what is called a "Turing Complete" language. This basically means that you can preform any arbitrary computation with the programming concepts you have learned so far.  Realistically however there are still some things that you would want to learn to be a competent and efficient programmer.</p>
+	  <p>The exercise for today is to write a computer program to demonstrate a core statistical concept called the Central Limit Theorem.  The Central Limit Theorem states that the distribution of the mean of any set of equivalent random samples is distributed as a normal distribution.  This theorem can be proved mathematically, but it is fairly easy to demonstrate it with some basic computation.</p>
+	  <p>You assignment is to create a python program to demonstrate the central limit theorem.  You should be able to do this using only the concepts we have talked about already in class. You should not use any additional libraries except for the "random" package and a package for plotting the results called "matplotlib".</p>
+  </div>
+	  <h2 class="section-header">Deliverables</h2>
+  <div class="section-body">
+    <p>Please submit the python code as a .py file that runs the simulations.  Make sure that you code is well documented and properly runs.  Over the course of the assignment you will need to run t=your code multiple times.  An assignment that does not run without modifications is not considered complete.</p>
+  </div>
+  <h2 class="section-header">Tips and tricks</h2>
+  <div class="section-body">
+    <p>You will need to use a new library for plotting the results of your simulation.  This library is called matplotlib and is one of the core data-science tools that we will learn about in a couple of weeks.  You can install it using:
+	  <pre>
+	  <code>
+	  pip install matplotlib
+	  </code>
+	  </pre>
+	  You will need to do this in the terminal within Visual Studio Code or outside on the command line.  (On Mac use the "Terminal" program from Applications>Utilities.  On Windows you would use PowerShell</p>
+		<p>Here is a some pseudo-code to get you started.
+	    <pre>
+	<code>
+	# Import the random module and the matplotlib module
+	# Store a variable to be the sample size
+	# The random numbers will be generated from
+	# integers starting at 1 up to, but not
+	# including this number
+	# Loop over each list item
+		# loop to generate a list of values
+	# calculate the mean
+    # store the mean
+	# Create a histogram of the means
+	# Try it with different sizes of sample
+	</code>
+	</pre>
+	</p>
+	<p>Here is a template for the code.  You will just need to fill in the middle with the actual computation:
+	<pre>
+	<code>
+	import random
+	from matplotlib import pyplot as plt
+
+	# Put your code here
+	
+	plt.hist(resultsList, bins=25)  # Create a histogram with the results
+	plt.title("Histogram demonstrating the Central Limit Theorem")
+	plt.show() # Show the histogram to the screen
+	</code>
+	</pre>
+	</p>
+  </div>
+
+
+
+  <!-- InstanceEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+<!-- InstanceEnd --></html>

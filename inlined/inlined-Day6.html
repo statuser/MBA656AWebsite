@@ -1,0 +1,210 @@
+<html lang="en-US">
+<!-- InstanceBegin template="/Templates/CanvasPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Canvas Template</title>
+<!-- InstanceEndEditable -->
+<!--
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/69d640e59b804992771ec1fed57a5039/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-c626ffd3ae.css">
+<link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+<link rel="stylesheet" media="all" href="https://instructure-uploads.s3.us-east-1.amazonaws.com/account_74070000000000001/attachments/1525105/canvas.css">
+-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body style="margin-bottom: 5em;margin-top: 3em;margin-left: 20em;margin-right: 20em">
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Canvas Page</h1>
+  <!-- Start Custom HTML for Canvas Page --> 
+  <!-- InstanceBeginEditable name="content" -->
+  <h2 class="section-header" style="">Introduction</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>Think about the "TENZI" psuedo code that you wrote and we talked about in class.  One of the key pieces of data that you needed to store and use was a the value of 10 die.  How would you store this information?</p>
+    <p>One solution would be to create 10 integer variables: </p>
+    <ul>
+      <li>dice1</li>
+      <li>dice2</li>
+      <li>dice3</li>
+      <li>dice4</li>
+      <li>dice5</li>
+      <li>dice6</li>
+      <li>dice7</li>
+      <li>dice8</li>
+      <li>dice9</li>
+      <li>dice10</li>
+    </ul>
+    This would be a major pain.  We would have to write each of the variables each time we wanted to roll the dice.  You would quickly get tired of writing the variable name every time.
+    <p>Wouldn't it be better to just have one variable that can hold all ten values: <br>
+      <code>dice = <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 1</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 2</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 3</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 4</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 5</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 6</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 7</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 8</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 9</span> <span style="display: inline; border: 1px solid black; padding-left: .25em; padding-right: .25em">die 10</span> </code> </p>
+    Python has a solution called lists that does exactly that. </div>
+  <h2 class="section-header" style="">Lists</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>Lists are Python's way of storing structured data.  Data that belongs and is used together, but needs to hold multiple values.</p>
+    <p>Remember how people say that one of the hardest things in programming is naming things.  Lists partially solve this problem.  You can name one thing and then use it to store multiple values.</p>
+    <p>If we revisit the train analogy from the second day of class, lists allow there to be multiple cars in a train.</p>
+    <p>Lists are called a container variable because they store multiple values.  The container in a list can hold data of any type: </p>
+    <ul>
+      <li>Primitives (Int, Float, Boolean and String variables)</li>
+      <li>Advanced Types called classes (We haven't covered these yet.  Look for this topic in a future lecture.)</li>
+      <li>Lists and other collection type variables (Turtles all the way down)</li>
+    </ul>
+    <p>There is not a formal limitation on how many values a list can store.  After a certain point you will run out of computer memory.  This doesn't ever manifest itself in practical situation because the limit is in the thousands.  If you find your self having problems with running out of memory you should probably look into a different method of storing your data such as databases.</p>
+    <p>Python doesn't enforce this, but it is best practice to only store one type of data in a given list.  You can have a list of integers, a list of strings, and a list of floats, but you shouldn't have a mixed list of strings and floats.  Mixing data types is a major source of very hard to find bugs.  In addition the items in a list should all be related.  If you have variables that serve a different purpose you should create a named variable for each purpose.</p>
+  </div>
+  <h2 class="section-header" style="">List Syntax and Programming in Python</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>You crate a list using <code>[]</code>.  For example: </p>
+    <pre>
+	  <code>
+	  smoothies = ['banana', 'passion fruit', 'mango', 'acai berry']
+	  </code>
+	  </pre>
+    <p>Each item in a list is given an index number.  These numbers start counting at 0.  You will see this over and over again in programming.  Programmers like to start counting at 0 instead of one. </p>
+    <p>Lists are said to be "ordered" because item 0 is always in the first position and so on.</p>
+    <p>You can access items in a list also using <code>[]</code>. </p>
+    <pre>
+	<code>
+	favorite = smoothie[2]
+	</code>
+	</pre>
+    This will store the value of "mango" the third item in the list in the variable <code>favorite</code>.
+    <p>You can also update a value in a list using the same notation: </p>
+    <pre>
+	<code>
+	smoothie[3] = "blueberry"
+	</code>
+	</pre>
+    The list is now: "banana", "passion fruit", "blueberry", "acai berry" </div>
+  <h2 class="section-header" style="">Common List Operations</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>Find the length of a list: </p>
+    <pre>
+	<code>
+	length = len(smoothies)
+	</code>
+	</pre>
+    The answer should be 4.
+    <p>Access the last item in a list: </p>
+    <pre>
+	<code>
+	last = smoothies[-1]
+	</code>
+	</pre>
+    The variable <code>last</code> will hold the value of the last item in the list in this case "acai berry". You can count staring from the end using a minus sign.  When counting backward you start with -1. (because 0 was already used.) This is unique to Python as far as I am aware, but ends up being very handy.
+    <p>Add an item to the end of the list: </p>
+    <pre>
+	<code>
+	smoothies.append("tropical")
+	</code>
+	</pre>
+    The smoothies list now contains 5 items.  The 4 items already in the list with "tropical" as the new last item.
+    <p>Create a new empty list: </p>
+    <pre>
+	<code>
+	newList = []
+	</code>
+	</pre>
+    This creates an empty list with 0 items in it.  You will sometimes need to do this before filling a list with items in a loop.
+    <p>Delete an item from the list: </p>
+    <pre>
+	<code>
+	del smoothies[1]
+	</code>
+	</pre>
+    The <code>smoothies</code> list now contains 4 items.  The second item - remember counting starts from 0 - has been removed.  This list should now be: "banana", blueberry", "acai berry", "tropical".  This is a little inconsistent, but Python's creators wanted to make this common operation very easy so it is a little unique.
+    <p>Combine two lists: </p>
+    <pre>
+	<code>combinedList = list1 + list2
+	</code>
+	</pre>
+    This will create a single list with the items from <code>list1</code> followed by the items from <code>list2</code>.
+    <p>Insert an item into an arbitrary position: </p>
+    <pre>
+	<code>
+	smoothies.insert(1, "raspberry")
+	</code>
+	</pre>
+    This will insert "raspberry" into position 1 (the second item) of the list moving the index of all subsequent items up by one.  The list is now: "banana", "raspberry", "blueberry", "acai berry", "tropical" </div>
+  <h2 class="section-header" style="">List Iteration</h2>
+  <div class="section-body" style="padding: 0 10px 10px 10px;border: solid #ccc 1px;overflow: hidden">
+    <p>Lists are especially useful when you need to preform the same operation on on each item in the list.  Think about "TENZI" where you have to roll each of the ten dice and keep track of the results.  If you store the dice in a list you can loop over each dice and roll it if it is not the target number. </p>
+    <pre>
+	<code>
+	import random # This is necessary so that we have access to the operations that generate random numbers
+	dice = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	index = 0
+	length = len(dice)
+	while index &lt; length:
+		dice[index] = random.randInt(1,6) # Generates a random integer between 1 and 6 inclusive
+		index = index + 1
+	</code>
+	</pre>
+    This will take each item in the dice list and generate a random number between 1 and 6.  Think about what this code would look like without lists:
+    <pre>
+	<code>
+	import random
+	dice1 = random.randInt(1, 6)
+	dice2 = random.randInt(1, 6)
+	dice3 = random.randInt(1, 6)
+	dice4 = random.randInt(1, 6)
+	dice5 = random.randInt(1, 6)
+	dice6 = random.randInt(1, 6)
+	dice7 = random.randInt(1, 6)
+	dice8 = random.randInt(1, 6)
+	dice9 = random.randInt(1, 6)
+	dice10 = random.randInt(1, 6)
+	</code>
+	</pre>
+    The second set of code repeats itself many more times.  If you have an error in your code you would have to change it in 10 places instead of in one place like you would in the first set of code.
+    <p>One of the key principles of computer programming is "Don't repeat yourself."  Lists help us do that.</p>
+    <p>Preforming an operation on each item of a list is such a common task that nearly all programming languages have implemented a shortcut.  We call this "iterating" over a list.  In Python it looks like: </p>
+    <pre>
+	  <code>
+	  import random
+	  dice = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	  for die in dice:
+	  	die = random.randInt(1,6)
+	  </code>
+	  </pre>
+    This greatly reduces the amount of "boilerplate" code that you have to write and as you become familiar with the syntax feel much easier to read. For loops are by far the most common for of looping.  It is actually pretty rare to see a while loop in production code.  This is mainly due to the shorter code and the lower potential for for bugs related to updating the index.
+    <p>Sometimes it is easier to work with the index numbers rather than each item in a list.  There is a special Python way of handling this. There is a command <code>range</code> that creates a list of numbers. For example if you to create a list of the first five numbers you would use: </p>
+    <pre>
+	  <code>
+	  numberList = range(5)
+	  </code>
+	  </pre>
+    to create a the list <code>[0, 1, 2, 3, 4]</code>.  You could then use a for loop to loop over the range have have each index number like so:
+    <pre>
+	  <code>
+	  for index in range(5):
+	  	print('Iterating through', i)
+	  </code>
+	  </pre>
+    A common pattern is:
+    <pre>
+	  <code>
+	  print('The smoothies we have available are:')
+	  length = len(smoothies)
+	  for index in range(length):
+	  	print("Smoothie #", index, smoothies[index]) # Prints the smoothie number and name
+	  </code>
+	  </pre>
+    <p>There is a more advanced way to loop over items in a list and get the index at the same time: </p>
+    <pre>
+	  <code>
+	  for index, smoothie in enumerate(smoothies):
+	  	print("Smoothie #", index, smoothie)
+	  </code>
+	  </pre>
+  </div>
+  <h2 class="section-header" style="">See the Homework for additional practice.  The homework is due Wednesday before class.</h2>
+  <!-- InstanceEndEditable --> 
+  <!-- End custom HTML for Canvas Page --> 
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>
