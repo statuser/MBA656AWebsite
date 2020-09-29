@@ -1,22 +1,28 @@
 import random
 
-computer = random.randint(1, 3)
-if computer == 1:
-    computer_chooses = "rock"
-elif computer == 2:
-    computer_chooses = "paper"
-else:
-    computer_chooses = "scissors"
-
-user_chooses = input("Please select rock, paper, scissors? ")
-
 tie_text = "It's a tie!"
 computer_text = "Too bad, the computer wins."
 user_text = "Congratulations, you win!"
 
-if user_chooses == computer_chooses:
-    result = tie_text
-elif user_chooses == 'rock' and computer_chooses == 'paper':
+tie = True
+while tie:
+    computer = random.randint(1, 3)
+    if computer == 1:
+        computer_chooses = "rock"
+    elif computer == 2:
+        computer_chooses = "paper"
+    else:
+        computer_chooses = "scissors"
+
+    user_chooses = input("Please select rock, paper, scissors? ")
+
+
+    if user_chooses == computer_chooses:
+        print(tie_text)
+    else:
+        tie = False
+
+if user_chooses == 'rock' and computer_chooses == 'paper':
     result = computer_text
 elif user_chooses == 'rock' and computer_chooses == 'scissors':
     result = user_text
