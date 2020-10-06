@@ -29,10 +29,22 @@ DEFINE a function compute_readability(text):
 
 
 DEFINE a function count_words(text):
-    ...
+    # Words are separated by whitespace
+    ASSIGN variable words to test.split() # The SPLIT functions splits a string into a list using white space as the delimiter
+    RETURN the length of the words list
 
 DEFINE a function count_sentences(text):
-    ...
+    # Sentences are split by puncuation.  The punctuation that matters is '.!;?'
+    DECLARE a variable number_of_sentences and set to 0
+    Loop through each character
+    If character is a puncuation mark:
+        Increment Sentences Counter
+    return number_of_sentences
 
 DEFINE a function count_syllables(text):
-    ...
+    # This is the hardest problem we will need to use a heuristic instead of an algorithm.
+    # Any word with three characters is 1 syllable
+    # Count number of vowels
+    # Remove any consecutive vowels
+    # Remove trailing e
+    # Treat y as vowel if it is the last character

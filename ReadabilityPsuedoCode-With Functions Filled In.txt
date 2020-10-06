@@ -1,0 +1,85 @@
+DEFINE a function compute_readability(text):
+
+    DECLARE a variable total_words and set to 0
+    DECLARE a variable total_sentences and set to 0
+    DECLARE a variable total_syllables and set to 0
+    DECLARE a variable score and set to 0
+
+    ASSIGN variable total_words to result of calling the function count_words(text)
+    ASSIGN variable total_sentences to result of calling the function count_sentences(text)
+    ASSIGN variable total_syllables to result of calling the function count_syllables(text)
+
+    ASSIGN variables score to 
+        206.835 - 1.015 * (total_words / total_sentences) - 84.6 * (total_syllables / total_words)
+
+    if score >= 90.0:
+        PRINT 'Reading level of 5th Grade'
+    elif score >= 80.0:
+        PRINT 'Reading level of 6th Grade'
+    elif score >= 70.0:
+        PRINT 'Reading level of 7th Grade'
+    elif score >= 60.0:
+        PRINT  'Reading level  of 8-9th Grade'
+    elif score >= 50.0:
+        PRINT 'Reading level of 10-12th Grade'
+    elif score >= 30.0:
+        PRINT 'Reading Level of College Student'
+    else:
+        PRINT 'Reading level of College Graduate'
+
+
+DEFINE a function count_words(text):
+    SPLIT text into words using white space as the seperator
+    COUNT the number of words
+    RETURN word_count
+
+DEFINE a function count_sentences(text):
+    DECLARE variable sentence_count and set to 0
+    LOOP over each character in text;
+        if character is one of ';.?!':
+            INCREASE sentence_count by one
+    RETURN sentence_count
+
+DEFINE a function count_syllables(text):
+    DECLARE variable cleaned_text and set to text
+    DECLARE variable syllable_count and set to 0
+    
+    REMOVE PUNCUATION
+        lowercase text
+        LOOP over each character in text:
+            if character is not one of 'abcdefghijklmnopqrstuvwxyz':
+                remove character
+    
+    SPLIT cleaned_text into a list containing words
+    LOOP over each word in cleaned_text:
+        syllable_count = syllable_count + count_syllables_in(word)
+    
+    RETURN syllable_count
+
+DEFINE function count_syllables_in(word):
+    if word has three letters or less:
+        RETURN 1
+
+    if last character in word is e:
+        set word = words except the last character
+    
+
+    DECLARE variable first_vowel_detected = False
+    LOOP over characters in word:
+        if character is vowel:
+            if first_vowel_detected == False:
+                set first_vowel_detected = True
+                syllable_count = syllable_count + 1
+        else:
+            set first_vowel_detected = False
+                
+    IF an word ends in y:
+        count as an additional syllable
+
+    RETURN syllable_count
+
+
+import text
+
+call compute_readability on text
+
