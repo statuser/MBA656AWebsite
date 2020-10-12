@@ -1,7 +1,9 @@
-# Functions Assignment
+""" This module is a set utility functions for computing basic statistical properties """
 
-# 1. Calculate mean of a list of numbers (int or float).
+
 def mean(values):
+    """Calculate mean of a list of numbers (int or float).
+        Pass in one parameter - List of numbers"""
     return sum(values) / len(values)
 
 
@@ -35,14 +37,14 @@ def moving_average(values, window):
         moving_average_values.append(moving_item)
     return moving_average_values
 
+if __name__ == '__main__':
+    # Test Code
+    sample_size = int(input("What is the maximum number in your sample set? "))
+    values = list(range(1, sample_size + 1))
+    print(values)
 
-# Test Code
-sample_size = int(input("What is the maximum number in your sample set? "))
-values = list(range(1, sample_size + 1))
-print(values)
-
-# Print the results
-print(mean(values))
-print(standard_deviation(values))
-print(standardize(values))
-print("The moving averages are ", moving_average(values, 4))
+    # Print the results
+    print(mean(values))
+    print(standard_deviation(values))
+    print(standardize(values))
+    print("The moving averages are ", moving_average(values, 4))
