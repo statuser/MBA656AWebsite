@@ -1,11 +1,8 @@
 import random
 from matplotlib import pyplot as plt
 
-# Create a list to hold the results this should be 1000 long
-#numberOfSamples = 10000
-numberOfSamples = 1000
-
-
+# Create a list to hold the results this should be 10000 long
+numberOfSamples = 10000
 resultsList = []
 
 # Store a variable to be the sample size
