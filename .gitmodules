@@ -1,0 +1,3 @@
+[submodule "Pandas-Cookbook"]
+	path = Pandas-Cookbook
+	url = https://statuser@github.com/statuser/pandas-cookbook.git
