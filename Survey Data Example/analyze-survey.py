@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # Read in data
-data = pd.read_csv('./Survey Data Example/DigitalCamera_030413.csv', parse_dates=[1, 2])
+data = pd.read_csv('https://raw.githubusercontent.com/statuser/MBA656AWebsite/master/Survey%20Data%20Example/DigitalCamera_030413.csv', parse_dates=[1, 2])
 print(data.head())
 print(data.columns)
 print(data.dtypes)
